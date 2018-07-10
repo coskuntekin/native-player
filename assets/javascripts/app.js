@@ -10,6 +10,7 @@ const singerTitle = querySelector('.js-singer-title');
 let seconds = '';
 let duration = '';
 let timeline = [];
+let hideCounter = false;
 
 async function stream() {
   const url = 'https://api.powergroup.com.tr/Channels/powerFM/?appRef=iPowerWebV4&qualityIndex=0&lang=tr&apiVersion=28';
@@ -22,6 +23,7 @@ async function stream() {
       songTitle.innerHTML = 'Power FM';
       singerTitle.innerHTML = 'Playing advertisement';
       svgImage.setAttribute('xlink:href', data.response.channel_logo_medium);
+      hideCounter = true;
     } else {
       seconds = timeline[0].remainingSeconds;
       duration = timeline[0].duration;
@@ -30,6 +32,7 @@ async function stream() {
       songTitle.setAttribute('title', songTitle.innerHTML);
       singerTitle.innerHTML = timeline[0].artistTitle;
       singerTitle.setAttribute('title', singerTitle.innerHTML);
+      hideCounter = false;
     }
   }).catch((error) => {
     console.error(`Upps ${error} went wrong!`);
