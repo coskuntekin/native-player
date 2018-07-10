@@ -4,7 +4,8 @@ It's refactor PowerFM with no-frameworks and libraries, created for fun. it's us
 
 ## Preview
 
-After clone the repository you can use `python -m SimpleHTTPServer`
+On Internet: [PowerFM](https://coskuntekin.github.io/PowerFM)
+On your local: After clone the repository you can use `python -m SimpleHTTPServer`
 
 ## ScreenShot
 
