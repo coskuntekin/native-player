@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="assets/stylesheets/application.css">
+  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+  <title>PowerFM</title>
+</head>
+<body>
+  <main role="main">
+    <section class="player">
+      <ul role="list" class="record-list">
+        <li role="listitem" class="record-item">
+          <svg class="progress-circle" width="100%" height="100%" viewbox="0 0 264 264" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <defs>
+                <pattern id="image" x="0%" y="0%" width="100%" height="100%">
+                  <image class="js-svg-image" x="0" y="0" width="240" height="240" xlink:href=""></image>
+                </pattern>
+              </defs>
+              <circle class="progress-bar" cx="130" cy="130" r="120" fill="url(#image)"></circle>
+              <circle class="progess-bar-fill js-progress-bar js-circle" cx="130" cy="130" r="120" transform="rotate(-90 130 130)" stroke-dashoffset="0"></circle>
+            </svg>
+          <div class="song-info">
+            <p class="song-title js-song-title">
+              Song Title
+            </p>
+            <small class="singer-title js-singer-title">
+              Artist Name
+            </small>
+            <p class="song-elapsed-time js-clock"></p>
+          </div>
+        </li>
+      </ul>
+      <div class="player-controls">
+        <button title="Back to playing song" disabled="disabled" id="js-btn-prev" class="btn btn-small" type="button">
+          <?xml version="1.0" ?><svg class="svg-icon" contentScriptType="text/ecmascript" contentStyleType="text/css" enable-background="new 0 0 2048 2048" height="2048px" id="Layer_1" preserveAspectRatio="xMidYMid meet" version="1.1" viewBox="0.0 0 1024.0 2048" width="1024.0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"><path fill="#2e656a" d="M979,269c12.667-12.667,23.333-17,32-13s13,14.667,13,32v1472c0,17.333-4.333,28-13,32s-19.333-0.333-32-13l-710-710  c-6-6-10.333-12.333-13-19v678c0,17.333-6.333,32.333-19,45s-27.667,19-45,19H64c-17.333,0-32.333-6.333-45-19s-19-27.667-19-45V320  c0-17.333,6.333-32.333,19-45s27.667-19,45-19h128c17.333,0,32.333,6.333,45,19s19,27.667,19,45v678c2.667-7.333,7-13.667,13-19  L979,269z"/></svg>
+        </button>
+        <button title="Play" class="btn btn-large display" id="js-btn-play" type="button">
+          <?xml version="1.0" ?><svg class="svg-icon" height="1792" viewBox="0 0 1792 1792" width="1792" xmlns="http://www.w3.org/2000/svg"><path fill="#2e656a" d="M896 128q209 0 385.5 103t279.5 279.5 103 385.5-103 385.5-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103zm384 823q32-18 32-55t-32-55l-544-320q-31-19-64-1-32 19-32 56v640q0 37 32 56 16 8 32 8 17 0 32-9z"/></svg>
+        </button>
+        <button title="Stop" class="btn btn-large hidden" id="js-btn-pause" type="button">
+          <?xml version="1.0" ?><svg class="svg-icon" height="1792" viewBox="0 0 1792 1792" width="1792" xmlns="http://www.w3.org/2000/svg"><path fill="#2e656a" d="M1216 1184v-576q0-14-9-23t-23-9h-576q-14 0-23 9t-9 23v576q0 14 9 23t23 9h576q14 0 23-9t9-23zm448-288q0 209-103 385.5t-279.5 279.5-385.5 103-385.5-103-279.5-279.5-103-385.5 103-385.5 279.5-279.5 385.5-103 385.5 103 279.5 279.5 103 385.5z"/></svg>
+        </button>
+        <button title="What is next?" disabled="disabled" class="btn btn-small" id="js-btn-next" type="button">
+          <?xml version="1.0" ?><svg class="svg-icon" contentScriptType="text/ecmascript" contentStyleType="text/css" enable-background="new 0 0 2048 2048" height="2048px" id="Layer_1" preserveAspectRatio="xMidYMid meet" version="1.1" viewBox="0.0 0 1024.0 2048" width="1024.0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" zoomAndPan="magnify"><path fill="#2e656a" d="M45,1779c-12.667,12.667-23.333,17-32,13s-13-14.667-13-32V288c0-17.333,4.333-28,13-32s19.333,0.333,32,13l710,710  c5.333,5.333,9.667,11.667,13,19V320c0-17.333,6.333-32.333,19-45s27.667-19,45-19h128c17.333,0,32.333,6.333,45,19s19,27.667,19,45  v1408c0,17.333-6.333,32.333-19,45s-27.667,19-45,19H832c-17.333,0-32.333-6.333-45-19s-19-27.667-19-45v-678  c-3.333,6.667-7.667,13-13,19L45,1779z"/></svg>
+        </button>
+      </div>
+      <audio id="js-audio-player" src="https://powerfm.listenpowerapp.com/powerfm/mpeg/icecast.audio"></audio>
+    </section>
+  </main>
+  <script src="assets/javascripts/app.js"></script>    
+</body>
+</html>
