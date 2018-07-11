@@ -4,7 +4,7 @@ It's refactor PowerFM with no-frameworks and libraries, created for fun. it's us
 
 ## Preview and Contributions
 
-On Internet: Click [here](https://coskuntekin.github.io/PowerFM)
+On Internet: Click [here](https://coskuntekin.github.io/native-player)
 
 On your local: After clone the repository you can use `python -m SimpleHTTPServer`
 
