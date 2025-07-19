@@ -1,71 +1,85 @@
-:root{
+:root {
   --text-color: #2c3e50;
   --stroke-color: #d86b55;
   --bg-body: #296468;
   --bg-player: #fb7e66;
 }
-html{
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+
+html {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: var(--text-color);
 }
+
 body {
   margin: 0;
   padding: 60px;
   background-color: var(--bg-body);
 }
+
 circle {
   stroke-linecap: square;
   stroke-linejoin: bevel;
 }
-.svg-icon{
+
+.svg-icon {
   display: inline-block;
   width: 1em;
   height: 1em;
 }
-button[disabled]{
+
+button[disabled] {
   opacity: 0.5;
   cursor: not-allowed;
 }
-.btn{
+
+.btn {
   background-color: transparent;
   border: none;
 }
-.btn-large{
-  font-size: 6rem
+
+.btn-large {
+  font-size: 6rem;
 }
-.btn-small{
-  font-size: 3rem
+
+.btn-small {
+  font-size: 3rem;
 }
-.player-controls{
+
+.player-controls {
   display: grid;
   grid-template-columns: auto auto auto;
   grid-template-rows: auto;
   align-items: center;
 }
+
 .player {
   display: inline-block;
   padding: 4rem 4rem 2rem 4rem;
   background-color: var(--bg-player);
   border-radius: 15px;
-  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.40);
+  box-shadow: 0 15px 20px 0 rgba(0, 0, 0, 0.4);
 }
+
 .record-list {
   list-style: none;
   padding: 0;
   margin-bottom: 3rem;
 }
+
 .record-item {
   position: relative;
 }
+
 .record-img {
   display: inherit;
   max-width: 100%;
   border-radius: 50%;
   border: 15px solid var(--stroke-color);
 }
+
 .song-info {
   position: absolute;
   top: 55%;
@@ -74,6 +88,7 @@ button[disabled]{
   width: 75%;
   text-align: center;
 }
+
 .song-elapsed-time,
 .song-title {
   font-size: 18px;
@@ -81,6 +96,7 @@ button[disabled]{
   margin-bottom: 0;
   margin-top: 0;
 }
+
 .song-elapsed-time,
 .song-title,
 .singer-title {
@@ -91,25 +107,30 @@ button[disabled]{
   white-space: nowrap;
   color: #fff;
 }
+
 .progress-circle {
   display: inline-block;
   width: 264px;
   height: 264px;
 }
+
 .progress-bar {
   stroke: var(--stroke-color);
   stroke-width: 20px;
 }
-.progess-bar-fill {
+
+.progress-bar-fill {
   fill: #d86a547d;
   stroke: #296468;
   stroke-width: 20px;
   stroke-dasharray: 735;
   transition: stroke-dashoffset 1s linear;
 }
-.hidden{
+
+.hidden {
   display: none;
 }
-.display{
+
+.display {
   display: inline-block;
 }
